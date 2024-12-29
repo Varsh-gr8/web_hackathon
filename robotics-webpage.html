@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+MX+Guides&display=swap" rel="stylesheet">
+    <style>
+    	.playwrite-mx-guides-regular
+    	{
+           font-family: "Playwrite MX Guides", serif;
+           font-weight: 400;
+           font-style: normal;
+        }
+
+
+        body {
+            background: black;
+            background-image: url(https://github.com/Varsh-gr8/web_hackathon/blob/main/robo.jpg?raw=true);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            height: 300px;
+            left: 10px;
+            width: cover;
+            margin-top: 20px;
+            padding: 30px;
+        }
+
+        .s1 {
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            gap: 20px;
+        }
+
+        .s1 .ss1
+        {
+            width: 150px;
+            height: 150px;
+            align-items: left;
+            transition: box-shadow 0.5s ease, transform 0.5s ease;
+            margin: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .s1 .ss1:hover
+        {
+            transform: scale(1.1);
+        }
+        .s1 .ss2 {
+            width: 50px;
+            height: 50px;
+            align-items: left;
+            transition: box-shadow 0.5s ease, transform 0.5s ease;
+            margin-top: 65px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .s1 .ss2:hover {
+            transform: scale(1.1);
+        }
+  
+ 
+
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: black;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.4s ease;
+            z-index: 1000;
+        }
+
+        .menu-container a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: royalblue;
+            border-bottom: 1px solid royalblue;
+            text-align: center;
+            transition: box-shadow 0.5s ease, transform 0.5s ease;
+        }
+
+        .menu-container a:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-container.show {
+            max-height: 200px;
+        }
+
+        .mulish-text1
+         {
+            font-size: 80px;
+            color: darkgray;
+            margin-top: 30px;
+            left: 10px;
+            padding: 30px;
+            text-align: left !important;
+            font-family: "Mulish", serif;
+            font-optical-sizing: auto;
+            font-weight: 150;
+            font-style: normal;
+            transition: text-shadow 0.3s ease;
+            line-height: 0;
+        }
+        .mulish-text1:hover
+        {
+        	text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f;
+        	transform: scale(1.1);
+        }
+        .mulish-text2
+         {
+            font-size: 80px;
+            color: darkgray;
+            margin-top: 30px;
+            left: 10px;
+            padding: 30px;
+            text-align: left !important;
+            font-family: "Mulish", serif;
+            font-optical-sizing: auto;
+            font-weight: 150;
+            font-style: normal;
+            transition: text-shadow 0.3s ease;
+            line-height: 0;
+        }
+        .mulish-text2:hover
+        {
+        	text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f;
+        	transform: scale(1.1);
+        }
+        .m2
+        {
+        	font-size: 40px;
+            color: darkgray;
+            text-align: left !important;
+            left: 10px;
+            margin-top:5px;
+            padding: 10px;
+            font-family: Brush Script MT;
+            font-optical-sizing: auto;
+            font-weight: 150;
+            font-style: normal;
+            transition: text-shadow 0.3s ease;
+            line-height: 0;
+        }
+        .m2:hover
+        {
+        	transform: scale(1.1);
+        }
+        .gif-container {
+            position: relative;
+            display: inline-block;
+            align-items: center;
+        }
+        .gif-container .hover-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-family: Comic Sans MS;
+            font-size: 50px;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+        }
+        .gif-container:hover .hover-text {
+            opacity: 1;
+        }
+        .gif-container img {
+            display: block;
+            width: 300px;
+            height: auto;
+        }
+
+        .team-section {
+            text-align: center;
+        }
+
+        .team-images {
+            position: fixed;
+            bottom: 10px;
+            right: 0%;
+            transform: translateX(-50%);
+            margin-bottom: 20px;
+            height: 100px;
+            width: 200px;
+        }
+
+        .team-images a {
+            position: absolute;
+            transition: transform 0.3s ease, z-index 0s 0.3s;
+        }
+
+        .team-images img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+
+        .team-images a:nth-child(1) {
+            left: 0px;
+            z-index: 3;
+        }
+
+        .team-images a:nth-child(2) {
+            left: 50px;
+            z-index: 2; 
+        }
+
+        .team-images a:nth-child(3) {
+            left: 100px;
+            z-index: 1; 
+        }
+
+        .team-images a:hover {
+            transform: scale(1.2); 
+            z-index: 4; 
+        }
+
+        .team-text p{
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-family: monospace;
+            margin-top: 150px;
+            right: 10%;
+            left: 90%;
+        }
+        .team-text p:hover {
+            color: royalblue;
+        }
+        .vid 
+        {
+            background-color: #000; 
+            outline: none;
+            controls: false;
+            object-fit: cover;
+            object-position: center; 
+            opacity: 0.9; 
+            transition: transform 0.3s ease, opacity 0.3s ease; 
+            transform: scale(1); 
+            margin-bottom: 100px;
+        }
+
+        video:hover
+        {
+        	transform: scale(1.05); 
+            opacity: 1; 
+     
+
+        }
+        .left-p
+        {
+        	font-size: 40px;
+        	font-family: monospace;
+        	top: 1500px;
+        	left:14px;
+            color: dodgerblue;
+            margin-top: 40px;
+        }
+        .mark2
+        {
+        	width: 200px;
+        	height: 200px;
+        	left: 50px;
+        	margin-left: 500px;
+        	margin-top: 30px;
+        	transition: all 0.5s ease;
+        	margin-bottom: 90px;
+        	border-radius: 30px;
+        }
+        .mark2:hover
+        {
+        	transform: scale(1.1);
+        }
+       .upeve
+        {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+            left: 0px;
+            margin-left: 0px;
+        }
+
+        .upeve > div 
+        {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            width: 180px; 
+            transition: all 0.5s ease;
+        }
+        .upeve > div:hover
+        {
+        	transform: scale(1.1);
+        	box-shadow: 0 0 15px 5px rgba(65, 105, 225, 0.3)
+        }
+        .upeve img
+        {
+            width: 180px; 
+            height: 180px; 
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .upeve p
+        {
+            margin-top: 10px; 
+            text-align: center; 
+            font-size: 16px; 
+            color: ghostwhite;
+            transition: transform 0.3s ease;
+        }
+        .ach
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center; 
+            gap: 5px; 
+        }
+
+        .ach img 
+        {
+            width: 400px;
+            height: 300px;
+            border-radius: 10px; 
+            margin-left: 105px;
+        }
+
+        .ach p
+        {
+            font-size: 25px;
+            font-family: cursive;
+            margin: 0; 
+            color: white;
+            text-align: center;
+            margin-left: 5px;
+        }
+        .ap
+        {
+        	font-size: 30px;
+        	font-family: monospace;
+            color: snow;
+            text-align:center;
+            margin-left: 15px;
+        }
+        .link-box {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid deepskyblue;
+            border-radius: 10px; 
+            background-color: black; 
+            text-align: center;
+            color: snow;
+            font-family: cursive;
+            font-size: 25px;
+            text-shadow: 2px 2px 5px deepskyblue;
+            width: fit-content;
+            margin-left: 200px; 
+        }
+
+        .link-box a {
+            text-decoration: none;
+            color: snow;
+        }
+
+        .link-box a:hover {
+            color: deepskyblue; 
+        }
+
+        .link-box img{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 5px; 
+            right: 5px; 
+        }
+        .sticky
+        {
+        	width: 500px;
+        	height: 400px;
+        	margin-left: 300px;
+        }
+        .image-container {
+            position: relative;
+            width: 500px; 
+            height: 400px; 
+            margin-left: 200px; 
+            margin-bottom: 300px;
+        }
+
+        .sticky {
+            width: 100%;
+            height: 100%;
+            margin-left: 10px;
+        }
+
+        .quote-text {
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            color: white; 
+            font-family: 'Arial', sans-serif;
+            font-size: 18px; 
+            text-align: center;
+            line-height: 1.5; 
+        }
+    </style>
+</head>
+<body>
+    <div class="s1">
+        <button class="menu-button" id="menuButton">≡</button>
+        <div class="menu-container" id="menuContainer">
+            <a href="file:///C:/Robotics-%20webdev/about.html">About</a>
+            <a href="file:///C:/Robotics-%20webdev/gallery.html">Gallery</a>
+            <a href="file:///C:/Robotics-%20webdev/teams.html">Team</a>
+            <a href="file:///C:/Robotics-%20webdev/public/contact_form.html">Contact</a>
+        </div>
+        <div class="ss1"><img src="https://roboticsclubvitc.co/public/vit_logo_white.png" alt="VIT Logo"></div>
+        <div class="ss2"><img src="https://roboticsclubvitc.co/public/SectionImages/clunb-removebg-preview-300h.png" alt="Club Logo"></div>
+    </div>
+    <div class="ss3">
+        <p class="mulish-text1">Robotics Club</p>
+        <p class="mulish-text2">VITC</p>
+        <p class="m2">Innovation is when Imagination meets Ambition</p>
+    </div>
+    <div class="gif">
+    <a href="file:///C:/Robotics-%20webdev/Industrial-reach.html" target="_blank" class="gif-container">
+        <img src="https://www.datatobiz.com/wp-content/uploads/2023/01/AI-consulting.gif" alt="Clickable GIF">
+        <div class="hover-text">Industrial reach</div>
+    </a>
+    </div>
+    <div class="team-section">
+        <div class="team-images">
+            <a href="file:///C:/Robotics-%20webdev/teams.html">
+                <img src="https://roboticsclubvitc.co/club/people/Harsh_Pandey.JPG" alt="Member 1">
+            </a>
+            <a href="file:///C:/Robotics-%20webdev/teams.html">
+                <img src="https://roboticsclubvitc.co/club/people/arokya.jpg" alt="Member 2">
+            </a>
+            <a href="file:///C:/Robotics-%20webdev/teams.html">
+                <img src="https://roboticsclubvitc.co/club/people/akash.jpg" alt="Member 3">
+            </a>
+        </div>
+        <div class="team-text">
+        <p>Managed and Controlled by 100+ Members</p></div>
+        <video width="600" controls class="vid">
+        <source src="https://github.com/Varsh-gr8/web_hackathon/raw/refs/heads/main/robot-new.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+    <div>
+    	<p class="left-p">
+    		Upcoming Events
+    	</p>
+    	<img src="https://github.com/Varsh-gr8/web_hackathon/blob/main/mark2-new.png?raw=true" alt="mark2-new" class="mark2">
+    </div>
+    <div class="upeve">
+    	<div class="u1">
+    		<img src="https://roboticsclubvitc.co/club/home/coming.webp" alt="i1">
+    		<p> Pitch-A-Thon</p>
+    	</div>
+    	<div class="u2">
+    		<img src="https://roboticsclubvitc.co/club/home/aurdiuno.jpg" alt="i2">
+    		<p> Rev-Up-Ardiono [L1]</p>
+    	</div>
+    	<div class="u3">
+    		<img src="https://roboticsclubvitc.co/club/home/coming.webp" alt="i3">
+    		<p> Rev-Up-RPI [L1] </p>
+    	</div>
+    	<div class="u4">
+    		<img src="https://roboticsclubvitc.co/club/home/aurdiuno.jpg" alt="i4">
+    		<p> Rev-Up-Ardiono [L2]</p>
+    	</div>
+    	<div class="u5">
+    		<img src="https://roboticsclubvitc.co/club/home/coming.webp" alt="i5">
+    		<p>Rev-Up-RPI [L2]</p>
+    	</div>
+    	<div class="u6">
+    		<img src="https://roboticsclubvitc.co/club/home/aurdiuno.jpg" alt="i6">
+    		<p>RoboPrix</p>
+    	</div>
+    </div>
+    <div class="ach"> 
+    	<p>Achievements</p>
+        <img src="https://github.com/Varsh-gr8/web_hackathon/blob/main/award-or-decoration-document-symbol-electric-blue-yellow-removebg-preview.png?raw=true">
+    </div>
+        <p class="ap">
+    	Breaking boundaries through our exceptional performance.
+        </p>
+       <div class="link-box">
+        <a href="file:///C:/Robotics-%20webdev/achievements.html">
+            Have a look over our achievements and certifications
+        </a>
+        <img src="https://www.pikpng.com/pngl/b/84-847933_free-icons-png-mouse-click-icon-png-clipart.png" alt="Cursor Icon" class="cursor-icon">
+    </div>
+    <div class="image-container">
+        <img src="https://github.com/Varsh-gr8/web_hackathon/blob/main/15-155405_post-it-clipart-blue-dark-blue-sticky-notes-removebg-preview.png?raw=true" 
+             alt="Sticky Note" class="sticky">
+        <div class="quote-text">
+            <u><strong style="font-size: 18px">Quote of the Day</strong></u><br>
+            <i>How so long the dark tunnel may be there is always a ray of light, the end of the tunnel.</i><br> 
+        </div>
+    </div>
+    
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const menuContainer = document.getElementById('menuContainer');
+        menuButton.addEventListener('click', () => {
+            menuContainer.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

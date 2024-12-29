@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            background: black;
+            background-image: url(https://github.com/Varsh-gr8/web_hackathon/blob/main/robo.jpg?raw=true);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            margin: 0;
+            padding: 30px;
+            width: 300px;
+            height: 300px;
+            color: whitesmoke;
+        }
+
+        .Quote {
+            font-size: 80px;
+            font-family: monospace;
+            font-weight: 200px;
+            color: floralwhite;
+        }
+
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 5px;
+            padding: 20px; 
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 900px; 
+            padding: 20px;
+            background-color: black;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 50px;
+        }
+
+        .flex-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .flex-container img {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .flex-container img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .flex-container p {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .flex-container p:hover {
+            color: deepskyblue;
+            transform: scale(1.1);
+        }
+
+        .home-link {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: royalblue;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: dodgerblue;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="file:///C:/Robotics-%20webdev/robotics-webpage.html" class="home-link">Home</a>
+    <p class="Quote">Information is Knowledge</p>
+    <div class="parent-container">
+        <div class="flex-container">
+            <img src="https://github.com/Varsh-gr8/web_hackathon/blob/main/vit.jpg?raw=true" alt="VIT Image">
+            <p><b>About VIT Chennai</b><br>
+            "A place to learn, a chance to grow"<br>
+            We are a group of ardent tech enthusiasts with the zeal to learn, to build and a thirst to be the best. A small group of passionate techies to explore different domains of technology has now blossomed into the official Robotics club of VIT, Vellore. Our mission is to spread knowledge about robotics by organizing various free workshops and seminars that help people out in finding their technical niches and build their own projects. Our members collaborate on some incredible projects and nurture glorious teams that represent us all over the world, and have several accolades to their name. With pride, all RoboVITians try to live up to the legacy left by our predecessors.</p>
+        </div>
+        <div class="flex-container">
+            <img src="https://github.com/Varsh-gr8/web_hackathon/blob/main/clunb-removebg-preview-1200w.png?raw=true" alt="Robotics Club">
+            <p><b>About Robotics Club</b><br>
+            Turning Ambitions to Reality<br>
+            We are a group of ardent tech enthusiasts with the zeal to learn, to build and a thirst to be the best. A small group of passionate techies to explore different domains of technology has now blossomed into the official Robotics club of VIT, Vellore. Our mission is to spread knowledge about robotics by organizing various free workshops and seminars that help people out in finding their technical niches and build their own projects. Our members collaborate on some incredible projects and nurture glorious teams that represent us all over the world, and have several accolades to their name. With pride, all RoboVITians try to live up to the legacy left by our predecessors.</p>
+        </div>
+    </div>
+</body>
+</html>

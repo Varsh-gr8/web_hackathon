@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teams</title>
+    <style>
+        body {
+            background: black;
+            background-image: url(https://github.com/Varsh-gr8/web_hackathon/blob/main/robo.jpg?raw=true);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            margin: 0;
+            padding: 30px;
+            width: 300px;
+            height: 300px;
+            color: whitesmoke;
+        }
+
+        .Quote {
+            font-size: 50px;
+            font-family: monospace;
+            font-weight: 200px;
+            color: floralwhite;
+        }
+
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 5px;
+            padding: 20px; 
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 900px; 
+            padding: 20px;
+            background-color: black;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 50px;
+        }
+
+        .flex-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .flex-container img {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .flex-container img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .flex-container p {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .flex-container p:hover {
+            color: deepskyblue;
+            transform: scale(1.1);
+        }
+
+        .home-link {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: royalblue;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: dodgerblue;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="file:///C:/Robotics-%20webdev/robotics-webpage.html" class="home-link">Home</a>
+    <p class="Quote">Talent wins games, but teamwork and intelligence wins championships</p>
+    <div class="parent-container">
+        <div class="flex-container">
+            <img src="https://roboticsclubvitc.co/club/people/arokya.jpg" alt="VIT Image">
+            <p><b>Dr. Arockia Selvakumar Arockia Doss</b><br>
+            As the faculty coordinator of the Robotics Club, it is my privilege to introduce our dynamic and vibrant community. Our club is a hub of creativity, innovation, and collaborative learning. We provide a platform for students to explore their passion for robotics, expand their technical skills, and cultivate a problem-solving mindset. Through engaging workshops, exciting projects, and competitive events, we aim to inspire and empower our members to excel in the world of robotics. Our club fosters a supportive environment where students can network, share ideas, and work together to push the boundaries of technological advancement. With a dedicated team of mentors and enthusiastic members, we strive to create a transformative experience that prepares students for future challenges and opportunities in the field of robotics.</p>
+        </div>
+        <div class="flex-container">
+            <img src="https://roboticsclubvitc.co/club/people/Naman_Tolasaria.JPG" alt="Robotics Club">
+            <p><b>Core 2024-25</b><br>
+            Naman Tolasaria<br>President</p>
+        </div>
+         <div class="flex-container">
+            <img src="https://roboticsclubvitc.co/club/people/Harsh_Pandey.JPG" alt="Robotics Club">
+            <p><b>Core 2023-24</b><br>
+            Harsh Pandey<br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

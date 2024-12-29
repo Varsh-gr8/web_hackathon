@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teams</title>
+    <style>
+        body {
+            background: black;
+            background-image: url(https://github.com/Varsh-gr8/web_hackathon/blob/main/robo.jpg?raw=true);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            margin: 0;
+            padding: 30px;
+            width: 300px;
+            height: 300px;
+            color: whitesmoke;
+        }
+
+        .Quote {
+            font-size: 50px;
+            font-family: monospace;
+            font-weight: 200px;
+            color: floralwhite;
+        }
+
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 5px;
+            padding: 20px; 
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 900px; 
+            padding: 20px;
+            background-color: black;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 50px;
+        }
+
+        .flex-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .flex-container img {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .flex-container img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .flex-container p {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .flex-container p:hover {
+            color: deepskyblue;
+            transform: scale(1.1);
+        }
+
+        .home-link {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: royalblue;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: dodgerblue;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="file:///C:/Robotics-%20webdev/robotics-webpage.html" class="home-link">Home</a>
+    <p class="Quote">High achievement always takes place in the framework of high expectation</p>
+    <div class="parent-container">
+        <div class="flex-container">
+            <img src="https://roboticsclubvitc.co/club/gallery/1.jpg" alt="VIT Image">
+            <p><b>2 Times best club Award</b><br>
+            On behalf of the Robotics Club, we are immensely proud to announce that we have been honored with the prestigious Best Club Award not once, but twice. This recognition is a testament to the hard work, dedication, and innovation of our club members. Through our collaborative efforts, we have demonstrated excellence in the field of robotics, showcasing our passion and expertise. These accolades validate our commitment to providing an exceptional platform for learning, experimentation, and technological advancement. We are grateful for the support of our members, mentors, and the entire robotics community, and we are motivated to continue pushing boundaries and achieving even greater heights in the future.</p>
+        </div>
+</body>
+</html>
+3

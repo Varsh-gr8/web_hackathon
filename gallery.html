@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            background: black;
+            background-image: url(https://github.com/Varsh-gr8/web_hackathon/blob/main/robo.jpg?raw=true);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            width: 300px;
+            height: 300px;
+            margin: 0;
+            padding: 30px;
+            color: whitesmoke;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            background: royalblue;
+            padding: 10px 20px;
+            border-radius: 40px;
+            border: 1px solid white;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background: white;
+            color: black;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .gallery-title {
+            font-size: 50px;
+            font-family: monospace;
+            font-weight: 200px;
+            color: floralwhite;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <a href="file:///C:/Robotics-%20webdev/robotics-webpage.html" class="home-button">Home</a>
+    <h1 class="gallery-title">Photo Gallery</h1>
+    <div class="gallery">
+        <a href="#img1" class="gallery-item">
+            <img src="https://roboticsclubvitc.co/club/gallery/7C.jpg" alt="Photo 1">
+        </a>
+        <a href="#img2" class="gallery-item">
+            <img src="https://roboticsclubvitc.co/club/gallery/6C.jpg" alt="Photo 2">
+        </a>
+        <a href="#img3" class="gallery-item">
+            <img src="https://roboticsclubvitc.co/club/gallery/1D.jpg" alt="Photo 3">
+        </a>
+        <a href="#img4" class="gallery-item">
+            <img src="https://roboticsclubvitc.co/club/gallery/10C.jpg" alt="Photo 4">
+        </a>
+        <a href="#img5" class="gallery-item">
+            <img src="https://roboticsclubvitc.co/club/gallery/1B.JPG" alt="Photo 5">
+        </a>
+        <a href="#img6" class="gallery-item">
+            <img src="https://roboticsclubvitc.co/club/gallery/4C.jpg" alt="Photo 6">
+        </a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="img1" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://roboticsclubvitc.co/club/gallery/7C.jpg" alt="Photo 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://roboticsclubvitc.co/club/gallery/6C.jpg" alt="Photo 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://roboticsclubvitc.co/club/gallery/1D.jpg" alt="Photo 3">
+    </div>
+    <div id="img4" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://roboticsclubvitc.co/club/gallery/10C.jpg" alt="Photo 4">
+    </div>
+    <div id="img5" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://roboticsclubvitc.co/club/gallery/1B.JPG" alt="Photo 5">
+    </div>
+    <div id="img6" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="https://roboticsclubvitc.co/club/gallery/4C.jpg" alt="Photo 6">
+    </div>
+</body>
+</html>

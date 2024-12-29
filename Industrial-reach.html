@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teams</title>
+    <style>
+        body {
+            background: black;
+            background-image: url(https://github.com/Varsh-gr8/web_hackathon/blob/main/robo.jpg?raw=true);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            margin: 0;
+            padding: 30px;
+            width: 300px;
+            height: 300px;
+            color: whitesmoke;
+        }
+
+        .Quote {
+            font-size: 40px;
+            font-family: monospace;
+            color: floralwhite;
+        }
+
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 5px;
+            padding: 20px; 
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 900px; 
+            padding: 20px;
+            background-color: black;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 50px;
+        }
+
+        .flex-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .flex-container img {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .flex-container img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .flex-container p {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .flex-container p:hover {
+            color: deepskyblue;
+            transform: scale(1.1);
+        }
+
+        .home-link {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: royalblue;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: dodgerblue;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="file:///C:/Robotics-%20webdev/robotics-webpage.html" class="home-link">Home</a>
+    <p style=" font-size: 70px; font-family: sans-serif;">Robotics Club
+Vit Chennai<br>
+    <p class="Quote">Innovation is when Imagination meets Ambition</p>
+    <img src="https://roboticsclubvitc.co/club/achievements/achieve.png" style="width: 500px;height: 400px; margin-left: 5px; margin-top: 30px;">
+    <div class="parent-container">
+        <div class="flex-container">
+            <img src="https://roboticsclubvitc.co/club/industries/jet%20aero.jpg" alt="VIT Image">
+            <p><b>Jet Aerospace</b><br>
+            Jet Aerospace is the one and only Aerospace Organization providing complete solutions for all requirements in academics and industries under Aerospace & Aviation Sector. We outsource high quality products and equipment for Government Tenders and UAV/Drone Lab Setup & Requirements. We have partnered with IHFC - Technology Innovation Hub of IIT Delhi for establishing Innovation Center - Drone Technology Park and Technology Transfer collaboration with Anna University (Govt of Tamil Nadu State University). We are Affiliated & Accredited as In-House R&D Unit by Aeronautical Sector Skill Council (ASSC), ISRO-IIRS Outreach Program Nodal Center, International Accredited Organization (IAI) & ISO 9001:2015 Certified, Govt. Registered under GST, TIN, CST, TAN, MSME, NSIC, Kerala Trade, Indian Bureau of Immigration FRO / FRRO C&S Form.</p>
+        </div>
+        <div class="flex-container">
+            <img src="https://roboticsclubvitc.co/club/industries/alstruct.jpg" alt="Robotics Club">
+            <p><b>Alstruct India</b><br>
+            Alstrut is an fast growing Indian company in the field of material handling range of products with our assembly technology products with alstrut brand, which includes aluminium extrusion profiles and accessories used for machine building, pipes and joints for building FIFO racks, trolleys, we have widely executed projects in various industries such as FMCG, packing solutions, modular type conveyors, automation of the assembly work stations and packing lines, conveyors, trolleys, bin racks etc.</p>
+        </div>
+         <div class="flex-container">
+            <img src="https://roboticsclubvitc.co/club/industries/UNBOX_LOGO_dark.png" alt="Robotics Club">
+            <p><b>Unbox Robotics</b><br>
+            Unbox Robotics is a leading supply chain robotics technology company, specializing in robotics-based fulfilment and distribution technology for small to large e-commerce, retail and logistics enterprises. Unbox Robotics’ cutting edge technology solutions accelerates the parcel sortation and order fulfilment to facilitate efficient express logistics operations delivering seamless end customer experience
+            </p>
+        </div>
+    </div>
+</body>
+</html>
